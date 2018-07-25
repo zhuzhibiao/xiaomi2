@@ -19,8 +19,8 @@ window.onload=function(){
 	let a=nav3.getElementsByTagName("a")[0];
 	console.log(son);
 	nav3.onmouseenter=function(){
-		son.style.height="85px";
-		son.style.boxShadow="0 2px 2px 2px black";
+		son.style.height="98px";
+		son.style.boxShadow="0 2px 10px rgba(0,0,0,0.15)";
 		nav3.style.backgroundColor="#fff";
 		a.style.color="#ff6700";
 	}
@@ -83,6 +83,168 @@ window.onload=function(){
 	xxk(hea,3);
 	xxk(hea,4);
 	xxk(hea,5);
-	
+	let box=document.getElementsByClassName("box")[0];
+	let wraper=box.getElementsByClassName("wraper")[0];
+	let con=wraper.getElementsByClassName("con");
+	let left2=box.getElementsByClassName("prev")[0];
+	let right=box.getElementsByClassName("next")[0];
+	let btn=wraper.getElementsByClassName("btns")[0];
+	let btns=btn.getElementsByClassName("son");
+	console.log(box,wraper,con,left2,right,btn,btns);
+	let num=0;
+	let tt=setInterval(move,2000);
+	function move(){
+		num++;
+		if (num==con.length) {
+			num=0;
+		}
+		for(let i=0;i<con.length;i++){
+			con[i].style.zIndex=15;
+			btns[i].style.background="#92897C";
+		}
+		con[num].style.zIndex=20;
+		btns[num].style.background="white";
+
+	}
+	wraper.onmouseenter=function(){
+		clearInterval(tt);
+	}
+	wraper.onmouseleave=function(){
+		tt=setInterval(move,2000);
+	}
+	left2.onclick=function(){
+		move1();
+	}
+	function move1(){
+		num--;
+		if (num<0) {
+			num=con.length-1;
+		}
+		for(let j=0;j<con.length;j++){
+			con[j].style.zIndex=15;
+			btns[j].style.background="#92897C";
+		}
+		con[num].style.zIndex=20;
+		btns[num].style.background="white";
+	}
+	right.onclick=function(){
+		move();
+	}
+	for(let k=0;k<btns.length;k++){
+		btns[k].onclick=function(){
+			for(let m=0;m<btns.length;m++){
+				con[m].style.zIndex=15;
+				btns[m].style.background="#92897c";
+			}
+			con[k].style.zIndex=20;
+			btns[k].style.background="white";
+			num=k;
+		}
+	}
+	function fn(a){
+	let box1=document.querySelectorAll(".hea3 .son")[a];
+	let son4=box1.querySelectorAll(".son1");
+	let zuo=box1.querySelector(".left");
+	let you=box1.querySelector(".right");
+	let btn2=box1.querySelectorAll(".bot .btn")
+	let width=parseInt(getComputedStyle(box1,null).width) ;
+	let now=0;
+	let next=0;
+	console.log(box1,son4,zuo,you,width,btn2);
+	zuo.onclick=function(){
+		if (now==0) {
+			return;
+		}
+		move3();
+	}
+	you.onclick=function(){
+		if (now==son4.length-1) {
+			return;
+		}
+		move2();
+	}
+	function move2(){
+		next++;
+		if (next==son4.length) {
+			next=0;
+		}
+		son4[next].style.left=width+"px";
+		son4[now].style.left=0;
+		for(let i=0;i<btn2.length;i++){
+			btn2[i].style.background="#b0b0b0";
+			btn2[i].style.border="2px solid white";
+		}
+		btn2[next].style.border=" 2px solid #ff6700"
+		btn2[next].style.background="white";
+		animate(son4[now],{left:-width});
+		animate(son4[next],{left:0});
+		now=next;
+	}
+	function move3(){
+		next--;
+		if (next<0) {
+			next=son4.length-1;
+		}
+		son4[now].style.left=0;
+		son4[next].style.left=-width+"px";
+		animate(son4[now],{left:width});
+		animate(son4[next],{left:0});
+		for(let i=0;i<btn2.length;i++){
+			btn2[i].style.background="#b0b0b0";
+			btn2[i].style.border=" 2px solid white";
+		}
+		btn2[next].style.border=" 2px solid #ff6700";
+		btn2[next].style.background="white";
+		now=next;
+	}
+	for(let i=0;i<btn2.length;i++){
+		btn2[i].onclick=function(){
+			if (i==now) {
+				return;
+			}
+			if (i<now) {
+				animate(son4[now],{left:width});
+				animate(son4[i],{left:0});
+			}
+			if (i>now) {
+				animate(son4[now],{left:-width});
+				animate(son4[i],{left:0});
+			}
+			for(let j=0;j<btn2.length;j++){
+				btn2[j].style.background="#e0e0e0";
+			}
+			btn2[i].style.background="white";
+			now=next=i;
+		}
+	}
+  }
+  fn(0);
+  fn(1);
+  fn(2);
+  fn(3);
+   let btn4=document.querySelectorAll(".big .title .right .btn");
+   let chuang=document.querySelector(".big .box2 .boxright");
+   let box2=document.querySelector(".big .box2 .box3");
+   let widths=parseInt( getComputedStyle(box2,null).width);
+   console.log(btn4,chuang,box2,widths);
+   let time=0;
+   btn4[1].onclick=function(){
+   		if (time==2) {
+   			return;
+   		}
+    	time++;
+ 		chuang.style.transform=`translateX(-${widths*time}px)`;
+ 	
+   }
+   btn4[0].onclick=function(){
+   		if (time<0) {
+   			time=0;
+   		}
+    	time--;
+ 		chuang.style.transform=`translateX(-${widths*time}px)`;
+ 	
+   }
+
 }
+
 

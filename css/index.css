@@ -2,7 +2,7 @@ T/*
 * @Author: Lenovo
 * @Date:   2018-04-22 15:24:40
 * @Last Modified by:   Lenovo
-* @Last Modified time: 2018-07-22 22:43:32
+* @Last Modified time: 2018-07-25 18:26:58
 */
 *{
 	margin: 0;
@@ -87,14 +87,14 @@ body{
 	overflow: hidden;
 	transition: all 0.5s;
 	z-index: 	22;
-	padding-top: 15px;
+	
 }
 .logo .biaoti .nav3 .son p{
 	width: 316px;
 	height: 98px;
 	font-size: 12px;
 	color: #424242;
-	line-height: 45px;
+	line-height: 70px;
 	text-align: center;
 }
 .big{
@@ -157,6 +157,7 @@ body{
 	padding: 2px 0;
 	float: left;
 	margin: 0;
+	list-style: none;
 }
 .big .box .aside .ha .son ul li{
 	width: 265px;
@@ -200,7 +201,7 @@ body{
 	width: 41px;
 	height: 69px;
 	background-image:url('../img/photo108.png');
-	
+	z-index: 20;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -228,6 +229,7 @@ body{
 	position: absolute;
 	right: 40px;
 	bottom: 40px;
+	z-index: 20;
 }
 .big .box .btns .son{
 	background-color: #92897C;
@@ -238,8 +240,10 @@ body{
 	margin: 0 5px;
 	float: left;
 }
-.big .box .btns .son:hover{
+.big .box .btns .son:nth-child(1){
 	background-color: white;
+}
+.big .box .btns .son:hover{
 	cursor: pointer;
 }
 .big .box1{
@@ -306,6 +310,24 @@ body{
 	height: 58px;
 	margin: 0 auto;
 	margin-top: 30px;
+	position: relative;
+}
+.big .title .right{
+	width: 72px;
+	height: 25px;
+	position: absolute;
+	right: 0;
+	top: 24px;
+}
+.big .title .right .btn{
+	width: 24px;
+	height: 16px;
+	border: 1px solid #e0e0e0;
+	padding: 3px 5px;
+	font-size: 16px;
+	line-height: 16px;
+	float: left;
+	text-align: center;
 }
 .big .title p{
 	font-size: 22px;
@@ -317,16 +339,37 @@ body{
 	width: 1226px;
 	height: 340px;
 	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.big .box3{
+	width: 992px;
+	height: 340px;
+	float: left;
+	transition: all 1s;
+	overflow: hidden;
+
+	position: absolute;
+	left: 248px;
+	top: 0;
+}
+.big .box2 .boxright{
+	width: 2232px;
+	float: left;
+	transition: all 1s;
 }
 .big .box2 .con{
 	width: 234px;
 	height: 340px;
 	float: left;
-	margin-left: 14px;
+	margin-right: 14px;
 }
 .big .box2 .con1{
-	margin-left: 0px;
+	width: 234px;
+	height: 340px;
+	float: left;
 }
+
 .logo1{
 	width: 1226px;
 	height: 100px;
@@ -434,11 +477,39 @@ body{
 .logo1 .nav3{
 	width: 297px;
 	height: 50px;
-	background-color: red;
 	float: right;
 	margin-top: 25px;
 }
-
+.logo1 .nav3 .text{
+	width: 223px;
+	height: 48px;
+	padding: 0 10px;
+	border: 1px solid #e0e0e0;
+	outline: none;
+}
+.logo1 .nav3 .text1{
+	width: 38px;
+	height: 37px;
+	padding: 1px 6px;
+	border: 1px solid #e0e0e0;
+	float: right;
+	padding-top: 10px;
+}
+.logo1 .nav3 .text1 i{
+	font-size: 24px;
+	line-height: 24px;
+	text-align: center;
+	color: #616161;
+	padding-top: 10px;
+	margin-left: 7px;
+}
+.logo1 .nav3 .text1:hover{
+	cursor: pointer;
+	background: #ff6700;
+}
+.logo1 .nav3 .text1:hover i{
+	color: white;
+}
 .tupian{
 	width: 1226px;
 	height: 120px;
@@ -941,10 +1012,87 @@ body{
 	padding-top: 45px;
 	border-top: 1px solid #ffac13;
 	background-color: white;
+	transition: all 0.2s;
+	position: relative;
+	overflow: hidden;
 }
-.hea3 .son1{
+.hea3 .son .bot{
+	width: 136px;
+	height: 30px;
+	position: absolute;
+	bottom: 30px;
+	left: 98px;
+}
+.hea3 .son .bot .btn{
+	width: 6px;
+	height: 6px;
+	background: #b0b0b0;
+	border: 2px solid white;
+	float: left;
+	margin: 0 2px;
+	border-radius: 50%;
+}
+.hea3 .son .bot .btn:nth-child(1){
+	background: white;
+	border: 2px solid #ff6700;
+}
+.hea3 .son .son1{
+	width: 296px;
+	height: 420px;
+	position: absolute;
+	padding-top: 45px;
+	left: -296px;
+	top: 0;
+}
+.hea3 .son .son1:nth-child(1){
+	left: 0;
+}
+.hea3 .son .son1 i{
+	width: 20px;
+	height: 24px;
+}
+.hea3 .son .left{
+	width: 20px;
+	height: 24px;
+	padding: 12px 0;
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	background: #4ad5ff;
+	overflow: hidden;
+	opacity: 0.2;
+}
+.hea3 .son:hover .left{
+    left: 0;
+}
+.hea3 .son .left:hover{
+	opacity: 0.6;
+}
+.hea3 .son .right{
+	width: 20px;
+	height: 24px;
+	padding: 12px 0;
+	position: absolute;
+	top: 50%;
+	right: -30px;
+	opacity: 0.2;
+	background:#4ad5ff;
+	overflow: hidden;
+}
+.hea3 .son:hover .right{
+	right: 0;
+}
+.hea3 .son .right:hover{
+	opacity: 0.6;
+}
+.hea3 .son:hover{
+	box-shadow: 0 15px 30px rgba(0, 0, 0,.1);
+	transform: translate3d(0, -2px, 0);
+}
+.hea3 .son:nth-child(2){
 	margin-left: 0;
 }
+
 .hea3 .son2{
 	border-top: 1px solid #83c44e;
 }
