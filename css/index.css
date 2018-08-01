@@ -2,7 +2,7 @@ T/*
 * @Author: Lenovo
 * @Date:   2018-04-22 15:24:40
 * @Last Modified by:   Lenovo
-* @Last Modified time: 2018-07-25 18:26:58
+* @Last Modified time: 2018-07-26 18:27:08
 */
 *{
 	margin: 0;
@@ -76,7 +76,10 @@ body{
 .logo .biaoti .nav3 a p{
 	margin: 0;
 } 
-
+.logo .biaoti .nav3 a p i{
+	font-size: 18px;
+	
+}
 .logo .biaoti .nav3 .son{
 	width: 316px;
 	height: 0px;
@@ -263,11 +266,24 @@ body{
 	width: 33.33%;
 	height: 50%;
 	float: left;
-	
+	padding-top: 18px;
+	box-sizing: border-box;
 	position: relative;
 	top: 0;
 	left: 0;
+	color:rgba(255,255,255,0.7);
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+}
+.big .box1 .con .son i{
+	width: 24px;
+	height: 28px;
 
+	font-size: 24px;
+	color: rgba(255,255,255,0.7);
+	display: block;
+	margin:0 auto;
 }
 .big .box1 .con1 .son:nth-child(1)::before,.big .box1 .con1 .son:nth-child(2)::before,.big .box1 .con1 .son:nth-child(3)::before{
 	content: "";
@@ -329,6 +345,13 @@ body{
 	float: left;
 	text-align: center;
 }
+.big .title .right .btn:hover{
+	color:#ff6700;
+	cursor: pointer;  
+}
+.big .title .right .btn:nth-child(1){
+	opacity: 0.2;
+}
 .big .title p{
 	font-size: 22px;
 	font-weight: 200;
@@ -366,10 +389,60 @@ body{
 }
 .big .box2 .con1{
 	width: 234px;
-	height: 340px;
+	height: 300px;
+	padding-top: 39px;
+	float: left;
+	border-top:1px solid #e53935;
+	background: #f1eded;
+	text-align: center;
+
+}
+.big .box2 .con1 .start{
+	width: 234px;
+	height: 31.2px;
+	padding-top: 15px;
+	font-size: 21px;
+	line-height: 31.2px;
+	text-align: center;
+	color: #ef3a3b;
+}
+.big .box2 .con1 img{
+	margin:  25px auto;
+	display: block;
+	 
+}
+.big .box2 .con1 .sub{
+	width: 234px;
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.54);
+	line-height: 22.5px;
+	text-align: center;
+}
+.big .box2 .con1 .coundown{
+	width: 168px;
+	height: 46px;
+	
+	margin: 28px 33px 0;
+}
+.big .box2 .con1 .coundown .time{
+	width: 46px;
+	height: 46px;
+	font-size: 24px;
+	float: left;
+	color: white;
+	background: #605751;
+	text-align: center;
+	line-height: 46px;
+}
+.big .box2 .con1 .coundown .dian{
+	width: 15px;
+	height: 46px;
+	font-size: 28px;
+	text-align: center;
+	line-height: 46px;
+	color: #605751;
 	float: left;
 }
-
 .logo1{
 	width: 1226px;
 	height: 100px;
@@ -575,17 +648,54 @@ body{
 	width: 992px;
 	height: 614px;
 }
+.hea .title .more .so .right .son .bottom{
+	width: 174px;
+	height: 58px;
+	position: absolute;
+	padding:8px 30px;
+	background: #ff6700;
+	display: block;
+	bottom: -74px;
+	left: 0;
+	transition: all 0.5s;
+}
+.hea .title .more .so .right .son .bottom span:nth-child(1){
+	font-size: 12px;
+	line-height: 18px;
+	margin:0;
+	padding:0;
+	margin-bottom: 5px;
+	color: #fff;
+	display: block;
+	border: 0;
+}
+.hea .title .more .so .right .son .bottom span:nth-child(2){
+	font-size: 12px;
+	line-height: 18px;
+	display: block;
+	color: rgba(255, 255, 255, 0.6);
+	margin:0;
+	padding:0;
+	border: 0;
+	float: left;
+}
+.hea .title .more .so .right .son:hover .bottom{
+	bottom:0;
+}
 .hea .title .more .so .right .son{
 	width: 234px;
 	height: 300px;
 	margin-left: 14px;
 	float: left;
 	background: white;
-	transition: all 0.5s
+	transition: all 0.5s;
+	position: relative;
+	overflow: hidden;
 }
 .hea .title .more .so .right .son:hover{
 	box-shadow: 0 10px 10px 5px #EAE9E9;
 	transform: translate(0,-3px);
+	
 }
 .hea .title .more .so .right .son:nth-child(1),.hea .title .more .so .right .son:nth-child(2),.hea .title .more .so .right .son:nth-child(3),.hea .title .more .so .right .son:nth-child(4){
 	margin-bottom: 14px;
@@ -854,6 +964,8 @@ body{
 	width: 1226px;
 	height: 388px;
 	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
 }
 .hea1 .title{
 	width: 1226px;
@@ -865,6 +977,36 @@ body{
 	line-height: 58px;
 	color: #333;
 }
+.hea1 .box{
+	width: 4904px;
+	height: 300px;
+	transition: all 1s;
+}
+.hea1 .title .right{
+	width: 72px;
+	height: 25px;
+	position: absolute;
+	right: 0;
+	top: 24px;
+}
+.hea1 .title .right .btn{
+	width: 24px;
+	height: 16px;
+	border: 1px solid #e0e0e0;
+	padding: 3px 5px;
+	font-size: 16px;
+	line-height: 16px;
+	float: left;
+	text-align: center;
+}
+.hea1 .title .right .btn:hover{
+	color:#ff6700;
+	cursor: pointer;  
+}
+.hea1 .title .right .btn:nth-child(1){
+	opacity: 0.2;
+}
+
 .hea1 .son{
 	width: 234px;
 	height: 300px;
@@ -1183,6 +1325,36 @@ body{
 	margin-left: 14px;
 	background-color: white;
 	transition: all 0.4s;
+	position: relative;
+}
+.hea4 .son .box{
+	width: 36px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	top: 140px;
+	left:30px;
+	background: white;
+	border-radius: 10px;
+}
+.hea4 .son:hover .box{
+	background:#ff6700;
+}
+.hea4 .son:hover .box i{
+	background:#ff6700;
+}
+.hea4 .son .box i{
+	display: block;
+	margin-top: 2px;
+	margin-left: 2px;
+	width: 32px;
+	height: 20px;
+	color: white;
+	background: black;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
 }
 .hea4 .son:hover{
 	box-shadow: 0 10px 10px 5px #EAE9E9;
@@ -1408,4 +1580,55 @@ body{
 }
 .map2 .ha2 img{
 	margin: 0 auto;
+}
+.fiex{
+	width: 82px;
+	height: 380px;
+	position: fixed;
+	right: 0;
+	top: 40px;
+	background: white;
+	border-top: 1px solid #f5f5f5;
+
+}
+.fiex .son{
+	width: 80px;
+	height: 90px;
+	border: 1px solid #f5f5f5;
+	border-top: none;
+
+}
+.fiex .son1{
+	margin-top: 20px;
+	border-top: 1px solid #f5f5f5;
+	display: none;
+}
+.fiex .son:hover .top i,.fiex .son:hover span{
+	color: #ff6700;
+}
+.fiex .son a{
+	display: block;
+	width: 80px;
+	height: 90px;
+}
+.fiex .son .top{
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.fiex .son .top i{
+	font-size: 30px;
+	color:#757575;
+
+}
+.fiex .son span{
+	display: block;
+	width: 100%;
+	height: 21px;
+	margin-top: 8px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	color: #757575;
 }
