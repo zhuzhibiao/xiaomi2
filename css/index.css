@@ -20,7 +20,7 @@ img{
 body{
 	background-color: #F5F5F5;
 	margin: 0;
-	width: 1519px;
+	width: 100%;
 }
 
 .logo{
@@ -133,7 +133,7 @@ body{
 	padding-bottom: 20px;
 	padding-top: 20px;
 	position: relative;
-	z-index: 20;
+	z-index: 30;
 }
 .big .box .aside .ha{
 	width: 204px;
@@ -214,6 +214,7 @@ body{
 .big .box .prev{
 	left: 	234px;
 	background-position: -83px;	
+	z-index: 27
 }
 .big .box .prev:hover{
 	background-position: 0px;
@@ -221,6 +222,7 @@ body{
 }
 .big .box .next{
 	background-position: -124px;
+	z-index: 20
 }
 .big .box .next:hover{
 	background-position: -42px;
@@ -486,11 +488,12 @@ body{
 	position: absolute;
 	top: 100px;
 	left: 0;
-	z-index: 21;
+	z-index: 31;
 	transition: height 0.5s;
 	overflow: hidden;
 	display: block	;
 	overflow: hidden;
+	
 }
 .logo1 .nav2:hover .son{
 	border-top: 1px solid #e0e0e0;
@@ -552,6 +555,14 @@ body{
 	height: 50px;
 	float: right;
 	margin-top: 25px;
+	position: relative;
+}
+.logo1 .nav3:hover .text{
+	border:1px solid #BCB9B9;
+}
+.logo1 .nav3:hover .text1{
+	border:1px solid #BCB9B9;
+	border-left: 0;
 }
 .logo1 .nav3 .text{
 	width: 223px;
@@ -559,14 +570,48 @@ body{
 	padding: 0 10px;
 	border: 1px solid #e0e0e0;
 	outline: none;
+	float: left;
 }
 .logo1 .nav3 .text1{
 	width: 38px;
 	height: 37px;
 	padding: 1px 6px;
 	border: 1px solid #e0e0e0;
-	float: right;
+	border-left: 0;
+	float: left;
 	padding-top: 10px;
+}
+.logo1 .nav3 .text2{
+	width: 33px;
+	height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	background: rgb(238, 238, 238);
+	color: #757575;
+	position: absolute;
+	left: 130px;
+	top: 16px;
+	display: block;
+}
+.logo1 .nav3 .text2:hover{
+	background: #ff6700;
+	color: white;
+}
+.logo1 .nav3 .text3:hover{
+	background: #ff6700;
+	color: white;
+}
+.logo1 .nav3 .text3{
+	width: 70px;
+	height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	background: rgb(238, 238, 238);
+	color: #757575;
+	position: absolute;
+	left: 170px;
+	top: 16px;
+	display: block;
 }
 .logo1 .nav3 .text1 i{
 	font-size: 24px;
@@ -579,6 +624,7 @@ body{
 .logo1 .nav3 .text1:hover{
 	cursor: pointer;
 	background: #ff6700;
+	border: #ff6700;
 }
 .logo1 .nav3 .text1:hover i{
 	color: white;
@@ -1589,7 +1635,7 @@ body{
 	top: 40px;
 	background: white;
 	border-top: 1px solid #f5f5f5;
-
+	z-index: 50;
 }
 .fiex .son{
 	width: 80px;

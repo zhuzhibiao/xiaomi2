@@ -3,15 +3,54 @@ window.onload=function(){
 	let nav2=big.getElementsByClassName("nav2")[0];
 	let son3=nav2.getElementsByClassName("son");
 	let span2=nav2.getElementsByClassName("shouji");
-	console.log(big,nav2,son3,span2);
-	for(let i=0;i<son3.length;i++){
-		span2[i].onmouseenter=function(){	
-		    son3[i].style.height="229px";	
+	let con5=document.querySelectorAll(".big .logo1 .nav2 .son .con")
+	console.log(big,nav2,son3,span2,con5);
+	nav2.onmouseenter=function(){
+		for(let i=0;i<son3.length;i++){
+			son3[i].style.height="229px";
+			span2[i].onmouseenter=function(){
+				for(let j=0;j<span2.length;j++){
+					son3[j].style.zIndex=0;
+					
+				}
+				son3[i].style.zIndex=31;
+			}
 		}
-		span2[i].onmouseleave=function(){
+	}
+	nav2.onmouseleave=function(){
+		for(let i=0;i<son3.length;i++){
 			son3[i].style.height=0;
 		}
-		
+	}
+	let text=document.querySelector(".big .nav3 .text");
+	let text2=document.querySelector(".big .nav3 .text2");
+	let  text3=document.querySelector(".big .nav3 .text3");
+	let text1=document.querySelector(".big .nav3 .text1");
+	let nav9=document.querySelector(".big .nav3")
+	console.log(text,text2,nav9)
+	text.onclick=function(){
+		text2.style.display="none";
+		text3.style.display="none";
+		text.style.border="1px solid #ff6700";
+		text1.style.border="1px solid #ff6700";
+		text1.style.borderLeft=0;
+	}
+	text.onblur=function(){
+		text2.style.display="block";
+		text3.style.display="block";
+		text.style.border="1px solid #e0e0e0";
+		text1.style.border="1px solid #e0e0e0";
+		text1.style.borderLeft=0;
+	}
+	nav9.onmouseenter=function(){
+		text.style.border="1px solid #757575";
+		text1.style.border="1px solid #757575";
+		text1.style.borderLeft=0;
+	}
+	nav9.onmouseleave=function(){
+		text.style.border="1px solid #e0e0e0";
+		text1.style.border="1px solid #e0e0e0";
+		text1.style.borderLeft=0;
 	}
 	let logo=document.getElementsByClassName("logo")[0];
 	let nav3=logo.getElementsByClassName("nav3")[0];
