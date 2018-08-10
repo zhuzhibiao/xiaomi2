@@ -129,7 +129,7 @@ body{
 .big .box .aside{
 	width: 234px;
 	height: 420px;
-	background-color: #10495E;
+	opacity: 0.5;
 	padding-bottom: 20px;
 	padding-top: 20px;
 	position: relative;
